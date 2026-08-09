@@ -1,0 +1,127 @@
+:root {
+    --pricing-bg: #0f172a;
+    --card-bg: #1e293b;
+    --accent: #818cf8;
+    --text-white: #ffffff;
+    --text-dim: #94a3b8;
+}
+
+body {
+    background-color: var(--pricing-bg);
+    font-family: system-ui, -apple-system, sans-serif;
+    color: var(--text-white);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+.pricing-container {
+    max-width: 1100px;
+    width: 90%;
+    margin: 50px auto;
+}
+
+.pricing-header {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.pricing-header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.pricing-header p {
+    color: var(--text-dim);
+}
+
+.pricing-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    align-items: center;
+}
+
+.card {
+    background: var(--card-bg);
+    border-radius: 16px;
+    padding: 30px;
+    position: relative;
+    border: 1px solid #334155;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+}
+
+.card.popular {
+    border: 2px solid var(--accent);
+    background: #172554;
+}
+
+.badge {
+    position: absolute;
+    top: -12px;
+    right: 20px;
+    background: var(--accent);
+    color: white;
+    padding: 4px 12px;
+    border-radius: 12px;
+    font-size: 0.75rem;
+    font-weight: bold;
+}
+
+.card-header h2 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+}
+
+.price {
+    font-size: 3rem;
+    font-weight: 800;
+}
+
+.price span {
+    font-size: 1rem;
+    color: var(--text-dim);
+}
+
+.features {
+    list-style: none;
+    padding: 0;
+    margin: 25px 0;
+}
+
+.features li {
+    padding: 10px 0;
+    border-bottom: 1px solid #334155;
+    font-size: 0.95rem;
+}
+
+.features li.disabled {
+    color: #475569;
+}
+
+.btn-card {
+    width: 100%;
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid var(--accent);
+    background: transparent;
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.btn-card:hover {
+    background: var(--accent);
+}
+
+.btn-popular {
+    background: var(--accent);
+}
