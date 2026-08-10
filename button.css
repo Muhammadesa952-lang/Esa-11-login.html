@@ -1,0 +1,44 @@
+body {
+  background-color: #050505;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+}
+
+.glow-btn {
+  padding: 1rem 2.5rem;
+  font-size: 1.2rem;
+  color: #fff;
+  background: linear-gradient(45deg, #ff007f, #7f00ff);
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  position: relative;
+  z-index: 1;
+  transition: transform 0.2s ease;
+}
+
+.glow-btn::before {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  background: linear-gradient(45deg, #ff007f, #7f00ff);
+  border-radius: 50px;
+  z-index: -1;
+  filter: blur(15px);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.glow-btn:hover {
+  transform: scale(1.05);
+}
+
+.glow-btn:hover::before {
+  opacity: 1;
+}
