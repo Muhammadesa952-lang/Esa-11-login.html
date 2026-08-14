@@ -1,0 +1,88 @@
+.card {
+  position: relative;
+  min-height: 230px;
+  padding: 30px 20px;
+  text-align: center;
+
+  background: linear-gradient(
+    145deg,
+    rgb(19, 70, 57, 0.95) rgba(7, 37, 29, 0.95)
+  );
+
+  border: 1px solid rgba(212, 175, 55, 0.25);
+  border-radius: 20px;
+  box-shadow:
+    0 10px 30px rgba(0, 0, 0, 0.35),
+    inset 0 1px 0 rgba(255, 255, 255, 0.04);
+
+  overflow: hidden;
+  transition: all 0.4s ease;
+}
+
+.card::before {
+  content: "";
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  background: rgba(212, 175, 55, 0.08);
+  border-radius: 50%;
+  top: -45px;
+  right: -45px;
+  transition: 0.4s;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  border-color: #d4af37;
+
+  box-shadow:
+    0 18px 40px rgba(0, 0, 0, 0.5),
+    0 0 25px rgba(212, 175, 55, 0.12);
+}
+
+.card:hover::before {
+  transform: scale(2);
+}
+
+/* ===NUMBER===== */
+
+.number {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+
+  width: 34px;
+  height: 34px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: #d4af37;
+  color: #06241c;
+
+  font-size: 13px;
+  font-weight: bold;
+
+  box-shadow: 0 3px 10px rgba(212, 175, 55, 0.25);
+}
+
+/* ===ARABIC==== */
+
+.arabic {
+  direction: rtl;
+
+  font-family: "Times New Roman", serif;
+  font-size: 40px;
+
+  color: #f4d77b;
+
+  margin-top: 25px;
+  margin-bottom: 18px;
+
+  line-height: 1.5%;
+
+  text-shadow: 0 0 15px rgba(212, 175, 55, 0.15);
+}
