@@ -1,0 +1,83 @@
+<!DOCTYPE
+  html
+  > <html
+  lang="en"
+  > <head
+  > <meta
+  charset="UTF-8"
+  > <meta
+  name="viewport"
+  content="width=device-width, initial-scale=1.0"
+  > <title
+  > Arav
+  Sen
+  —
+  Systems
+  Engineer</title
+  > <style
+  > :root {
+  --bg: #0b0d0c;
+  --panel: #141715;
+  --line: #2a3330;
+  --amber: #ffb454;
+  --amber-dim: #8a6432;
+  --teal: #5fd9c8;
+  --ink: #e9ece9;
+  --ink-dim: #8a938f;
+  --mono: "Courier New", ui-monospace, Consolas, monospace;
+  --disp: Georgia, "Times New Roman", serif;
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  background:
+    radial-gradient(
+      circle at 20% 10%,
+      rgba(95, 217, 200, 0.06),
+      transparent 40%
+    ),
+    var(--bg);
+  color: var(--ink);
+  font-family: var(--mono);
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+a {
+  color: inherit;
+}
+/* HUD frame */
+.hud-corner {
+  position: fixed;
+  width: 24px;
+  height: 24px;
+  border: 1px solid var(--amber-dim);
+  z-index: 50;
+  opacity: 0.6;
+}
+.hud-corner.tl {
+  top: 14px;
+  left: 14px;
+  border-right: none;
+  border-bottom: none;
+}
+.hud-corner.tr {
+  top: 14px;
+  right: 14px;
+  border-left: none;
+  border-bottom: none;
+}
+.hud-corner.bl {
+  bottom: 14px;
+  left: 14px;
+  border-right: none;
+  border-top: none;
+}
+.hud-corner.br {
+  bottom: 14px;
+  right: 14px;
+  border-left: none;
+  border-top: none;
+}
