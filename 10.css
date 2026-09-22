@@ -1,0 +1,52 @@
+.face:hover {
+  border-color: rgba(62, 242, 255, 0.6);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.08),
+    0 0 40px rgba(255, 62, 165, 0.2);
+}
+.face .n {
+  color: var(--pink-dim);
+  font-size: 11px;
+  letter-spacing: 0.2em;
+  font-family: var(--mono);
+}
+.face .t {
+  color: var(--ink);
+  font-weight: 700;
+  font-size: 19px;
+  position: relative;
+  display: inline-block;
+}
+.face .t::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -6px;
+  width: 24px;
+  height: 2px;
+  background: linear-gradient(90deg, var(--pink), var(--cyan));
+  transform: translateX(-50%);
+}
+.face .d {
+  color: var(--ink-dim);
+  font-size: 11px;
+  line-height: 1.5;
+}
+.face.front {
+  transform: translateZ(110px);
+}
+.face.back {
+  transform: rotateY(180deg) translateZ(110px);
+}
+.face.right {
+  transform: rotateY(90deg) translateZ(110px);
+}
+.face.left {
+  transform: rotateY(-90deg) translateZ(110px);
+}
+.face.top {
+  transform: rotateX(90deg) translateZ(110px);
+}
+.face.bottom {
+  transform: rotateX(-90deg) translateZ(110px);
+}
