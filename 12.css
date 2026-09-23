@@ -1,0 +1,32 @@
+token-keyword {
+  color: #ff7b72;
+}
+.token-string {
+  color: #a5d6ff;
+}
+.token-comment {
+  color: #8b949e;
+  font-style: italic;
+}
+/* responsive-grid.css */
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 16px;
+  margin: 20px 0;
+}
+
+.grid-card {
+  border: 1px solid #30363d;
+  border-radius: 6px;
+  padding: 16px;
+  background-color: #161b22;
+  transition:
+    transform 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.grid-card:hover {
+  transform: translateY(-2px);
+  border-color: #58a6ff;
+}
