@@ -1,0 +1,34 @@
+p,
+ul,
+ol,
+blockquote {
+  margin-block: var(--space-4);
+}
+
+/* keep lines readable */
+p,
+li {
+  max-width: 68ch;
+}
+
+small,
+.text-small {
+  font-size: var(--text-sm);
+}
+.text-muted {
+  color: var(--color-text-muted);
+}
+
+a {
+  color: var(--color-accent);
+  text-underline-offset: 0.2em;
+}
+a:hover {
+  color: var(--color-accent-hover);
+}
+
+blockquote {
+  padding-left: var(--space-4);
+  border-left: 3px solid var(--color-border);
+  color: var(--color-text-muted);
+}
